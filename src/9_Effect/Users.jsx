@@ -7,6 +7,7 @@ function Users() {
   //state quản lý giá trị trả về từ API
   const [users, setUsers] = useState([]);
 
+  //Hàm dùng để call API
   const fetchUsers = async () => {
     try {
       const response = await axios({

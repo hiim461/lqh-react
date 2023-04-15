@@ -3,6 +3,12 @@ import ReactDOM from "react-dom/client";
 //Lưu ý import phía trước file css
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
+
+//import redux store
+import store from "./store";
+//import component Provider từ react-redux để kết nối redux store với component của react
+import { Provider } from "react-redux";
+
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
@@ -11,7 +17,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render tương tự innerHTML của root
 root.render(
   // <React.StrictMode>
-  <App />
+  <Provider store={store}>
+    <App />
+  </Provider>
+
   // </React.StrictMode>
   //Lưu ý nếu để stru=ict mode thì nó sẽ chạy luôn unmount trong effect
 );

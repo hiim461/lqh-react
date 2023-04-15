@@ -10,7 +10,7 @@ function Effect() {
   const [count, setCount] = useState(0);
   // TH1: useEffect với tham số thứ 2 là 1 array rỗng:
   // - Chạy hàm setup 1 lần duy nhất sau lần render đầu tiên
-  // - Thường dùng để call API, tương tác với DOM(nghĩa là chắc chắn render cụm return bên dưới rồi thì ta mới DOM được-hehehe)
+  // - Thường dùng để call API, tương tác với DOM(nghĩa là chắc chắn render cụm return bên dưới rồi thì ta mới DOM được, vì hàm effect chạy sau render-hehehe)
   //   useEffect(() => {
   //     console.log("effect run");
   //   }, []);

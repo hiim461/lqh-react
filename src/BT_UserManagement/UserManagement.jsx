@@ -58,7 +58,7 @@ function UserManagement() {
       } else {
         //Thêm mới
         await axios.post(
-          `https://63e86415ac3920ad5beb7b08.mockapi.io/api/users/`,
+          `https://63e86415ac3920ad5beb7b08.mockapi.io/api/users`,
           payLoad
         );
       }
@@ -94,7 +94,7 @@ function UserManagement() {
   //Viết hàm xử lý nhận vào giá trị searchString
   const handleSearch = (searchString) => {
     setSearchByEmail(searchString);
-    // ?: Khi state searchByEmail thay đổi, ta muốn gọi lại hàm fetchUser => đưa searchByEmail vào làm tham số bên trong useEffect bên dưới
+    // ?: Khi state searchByEmail thay đổi, ta muốn gọi lại hàm fetchUser => đưa state searchByEmail vào làm tham số bên trong useEffect bên dưới
   };
 
   useEffect(() => {
